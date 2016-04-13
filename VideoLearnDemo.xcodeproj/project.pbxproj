@@ -1,0 +1,605 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB034AAA1CB513E500CE01A6 /* point.png in Resources */ = {isa = PBXBuildFile; fileRef = FB034AA91CB513E500CE01A6 /* point.png */; };
+		FB034AAD1CB5194900CE01A6 /* PlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB034AAC1CB5194900CE01A6 /* PlayerView.m */; };
+		FB2A51281CB746E100EBD53B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2A51271CB746E100EBD53B /* QuartzCore.framework */; };
+		FB2A512A1CB7994D00EBD53B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB2A51291CB7994D00EBD53B /* AVFoundation.framework */; };
+		FB6C10911CBDF73000D9860A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6C10901CBDF73000D9860A /* Images.xcassets */; };
+		FB82599D1CB3613C00DE2750 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FB82599C1CB3613C00DE2750 /* main.m */; };
+		FB8259A01CB3613C00DE2750 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FB82599F1CB3613C00DE2750 /* AppDelegate.m */; };
+		FB8259A31CB3613C00DE2750 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8259A21CB3613C00DE2750 /* ViewController.m */; };
+		FB8259A61CB3613C00DE2750 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB8259A41CB3613C00DE2750 /* Main.storyboard */; };
+		FB8259A81CB3613C00DE2750 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB8259A71CB3613C00DE2750 /* Assets.xcassets */; };
+		FB8259AB1CB3613C00DE2750 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB8259A91CB3613C00DE2750 /* LaunchScreen.storyboard */; };
+		FB8259B61CB3613C00DE2750 /* VideoLearnDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8259B51CB3613C00DE2750 /* VideoLearnDemoTests.m */; };
+		FB8259C11CB3613C00DE2750 /* VideoLearnDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = FB8259C01CB3613C00DE2750 /* VideoLearnDemoUITests.m */; };
+		FBE3FE8E1CB4A0AA0010D83A /* MovieShowView.m in Sources */ = {isa = PBXBuildFile; fileRef = FBE3FE8D1CB4A0AA0010D83A /* MovieShowView.m */; };
+		FBE3FE9A1CB4DF110010D83A /* fullscreen-button.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE3FE901CB4DF110010D83A /* fullscreen-button.png */; };
+		FBE3FE9B1CB4DF110010D83A /* fullscreen-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE3FE911CB4DF110010D83A /* fullscreen-button@2x.png */; };
+		FBE3FE9C1CB4DF110010D83A /* minimize-button.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE3FE921CB4DF110010D83A /* minimize-button.png */; };
+		FBE3FE9D1CB4DF110010D83A /* minimize-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE3FE931CB4DF110010D83A /* minimize-button@2x.png */; };
+		FBE3FE9E1CB4DF110010D83A /* pause-button.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE3FE941CB4DF110010D83A /* pause-button.png */; };
+		FBE3FE9F1CB4DF110010D83A /* pause-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE3FE951CB4DF110010D83A /* pause-button@2x.png */; };
+		FBE3FEA01CB4DF110010D83A /* play-button.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE3FE961CB4DF110010D83A /* play-button.png */; };
+		FBE3FEA11CB4DF110010D83A /* play-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE3FE971CB4DF110010D83A /* play-button@2x.png */; };
+		FBE3FEA21CB4DF110010D83A /* share-button.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE3FE981CB4DF110010D83A /* share-button.png */; };
+		FBE3FEA31CB4DF110010D83A /* share-button@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FBE3FE991CB4DF110010D83A /* share-button@2x.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB8259B21CB3613C00DE2750 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB8259901CB3613C00DE2750 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB8259971CB3613C00DE2750;
+			remoteInfo = VideoLearnDemo;
+		};
+		FB8259BD1CB3613C00DE2750 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB8259901CB3613C00DE2750 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB8259971CB3613C00DE2750;
+			remoteInfo = VideoLearnDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB034AA91CB513E500CE01A6 /* point.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = point.png; sourceTree = "<group>"; };
+		FB034AAB1CB5194900CE01A6 /* PlayerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerView.h; sourceTree = "<group>"; };
+		FB034AAC1CB5194900CE01A6 /* PlayerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerView.m; sourceTree = "<group>"; };
+		FB2A51271CB746E100EBD53B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		FB2A51291CB7994D00EBD53B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		FB6C10901CBDF73000D9860A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		FB8259981CB3613C00DE2750 /* VideoLearnDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoLearnDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB82599C1CB3613C00DE2750 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FB82599E1CB3613C00DE2750 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FB82599F1CB3613C00DE2750 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FB8259A11CB3613C00DE2750 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		FB8259A21CB3613C00DE2750 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		FB8259A51CB3613C00DE2750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB8259A71CB3613C00DE2750 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB8259AA1CB3613C00DE2750 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB8259AC1CB3613C00DE2750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB8259B11CB3613C00DE2750 /* VideoLearnDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoLearnDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB8259B51CB3613C00DE2750 /* VideoLearnDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoLearnDemoTests.m; sourceTree = "<group>"; };
+		FB8259B71CB3613C00DE2750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB8259BC1CB3613C00DE2750 /* VideoLearnDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VideoLearnDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB8259C01CB3613C00DE2750 /* VideoLearnDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoLearnDemoUITests.m; sourceTree = "<group>"; };
+		FB8259C21CB3613C00DE2750 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBE3FE8C1CB4A0AA0010D83A /* MovieShowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieShowView.h; sourceTree = "<group>"; };
+		FBE3FE8D1CB4A0AA0010D83A /* MovieShowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieShowView.m; sourceTree = "<group>"; };
+		FBE3FE901CB4DF110010D83A /* fullscreen-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fullscreen-button.png"; sourceTree = "<group>"; };
+		FBE3FE911CB4DF110010D83A /* fullscreen-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fullscreen-button@2x.png"; sourceTree = "<group>"; };
+		FBE3FE921CB4DF110010D83A /* minimize-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minimize-button.png"; sourceTree = "<group>"; };
+		FBE3FE931CB4DF110010D83A /* minimize-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "minimize-button@2x.png"; sourceTree = "<group>"; };
+		FBE3FE941CB4DF110010D83A /* pause-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-button.png"; sourceTree = "<group>"; };
+		FBE3FE951CB4DF110010D83A /* pause-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pause-button@2x.png"; sourceTree = "<group>"; };
+		FBE3FE961CB4DF110010D83A /* play-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-button.png"; sourceTree = "<group>"; };
+		FBE3FE971CB4DF110010D83A /* play-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "play-button@2x.png"; sourceTree = "<group>"; };
+		FBE3FE981CB4DF110010D83A /* share-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-button.png"; sourceTree = "<group>"; };
+		FBE3FE991CB4DF110010D83A /* share-button@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "share-button@2x.png"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB8259951CB3613C00DE2750 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2A512A1CB7994D00EBD53B /* AVFoundation.framework in Frameworks */,
+				FB2A51281CB746E100EBD53B /* QuartzCore.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB8259AE1CB3613C00DE2750 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB8259B91CB3613C00DE2750 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB82598F1CB3613C00DE2750 = {
+			isa = PBXGroup;
+			children = (
+				FB2A51291CB7994D00EBD53B /* AVFoundation.framework */,
+				FB2A51271CB746E100EBD53B /* QuartzCore.framework */,
+				FB82599A1CB3613C00DE2750 /* VideoLearnDemo */,
+				FB8259B41CB3613C00DE2750 /* VideoLearnDemoTests */,
+				FB8259BF1CB3613C00DE2750 /* VideoLearnDemoUITests */,
+				FB8259991CB3613C00DE2750 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB8259991CB3613C00DE2750 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB8259981CB3613C00DE2750 /* VideoLearnDemo.app */,
+				FB8259B11CB3613C00DE2750 /* VideoLearnDemoTests.xctest */,
+				FB8259BC1CB3613C00DE2750 /* VideoLearnDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB82599A1CB3613C00DE2750 /* VideoLearnDemo */ = {
+			isa = PBXGroup;
+			children = (
+				FB82599E1CB3613C00DE2750 /* AppDelegate.h */,
+				FB82599F1CB3613C00DE2750 /* AppDelegate.m */,
+				FB8259A11CB3613C00DE2750 /* ViewController.h */,
+				FB8259A21CB3613C00DE2750 /* ViewController.m */,
+				FBE3FE8C1CB4A0AA0010D83A /* MovieShowView.h */,
+				FBE3FE8D1CB4A0AA0010D83A /* MovieShowView.m */,
+				FB034AAB1CB5194900CE01A6 /* PlayerView.h */,
+				FB034AAC1CB5194900CE01A6 /* PlayerView.m */,
+				FBE3FE8F1CB4DF110010D83A /* images */,
+				FB8259A41CB3613C00DE2750 /* Main.storyboard */,
+				FB8259A71CB3613C00DE2750 /* Assets.xcassets */,
+				FB8259A91CB3613C00DE2750 /* LaunchScreen.storyboard */,
+				FB8259AC1CB3613C00DE2750 /* Info.plist */,
+				FB6C10901CBDF73000D9860A /* Images.xcassets */,
+				FB82599B1CB3613C00DE2750 /* Supporting Files */,
+			);
+			path = VideoLearnDemo;
+			sourceTree = "<group>";
+		};
+		FB82599B1CB3613C00DE2750 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				FB82599C1CB3613C00DE2750 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		FB8259B41CB3613C00DE2750 /* VideoLearnDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB8259B51CB3613C00DE2750 /* VideoLearnDemoTests.m */,
+				FB8259B71CB3613C00DE2750 /* Info.plist */,
+			);
+			path = VideoLearnDemoTests;
+			sourceTree = "<group>";
+		};
+		FB8259BF1CB3613C00DE2750 /* VideoLearnDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB8259C01CB3613C00DE2750 /* VideoLearnDemoUITests.m */,
+				FB8259C21CB3613C00DE2750 /* Info.plist */,
+			);
+			path = VideoLearnDemoUITests;
+			sourceTree = "<group>";
+		};
+		FBE3FE8F1CB4DF110010D83A /* images */ = {
+			isa = PBXGroup;
+			children = (
+				FB034AA91CB513E500CE01A6 /* point.png */,
+				FBE3FE901CB4DF110010D83A /* fullscreen-button.png */,
+				FBE3FE911CB4DF110010D83A /* fullscreen-button@2x.png */,
+				FBE3FE921CB4DF110010D83A /* minimize-button.png */,
+				FBE3FE931CB4DF110010D83A /* minimize-button@2x.png */,
+				FBE3FE941CB4DF110010D83A /* pause-button.png */,
+				FBE3FE951CB4DF110010D83A /* pause-button@2x.png */,
+				FBE3FE961CB4DF110010D83A /* play-button.png */,
+				FBE3FE971CB4DF110010D83A /* play-button@2x.png */,
+				FBE3FE981CB4DF110010D83A /* share-button.png */,
+				FBE3FE991CB4DF110010D83A /* share-button@2x.png */,
+			);
+			path = images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB8259971CB3613C00DE2750 /* VideoLearnDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB8259C51CB3613C00DE2750 /* Build configuration list for PBXNativeTarget "VideoLearnDemo" */;
+			buildPhases = (
+				FB8259941CB3613C00DE2750 /* Sources */,
+				FB8259951CB3613C00DE2750 /* Frameworks */,
+				FB8259961CB3613C00DE2750 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VideoLearnDemo;
+			productName = VideoLearnDemo;
+			productReference = FB8259981CB3613C00DE2750 /* VideoLearnDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB8259B01CB3613C00DE2750 /* VideoLearnDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB8259C81CB3613C00DE2750 /* Build configuration list for PBXNativeTarget "VideoLearnDemoTests" */;
+			buildPhases = (
+				FB8259AD1CB3613C00DE2750 /* Sources */,
+				FB8259AE1CB3613C00DE2750 /* Frameworks */,
+				FB8259AF1CB3613C00DE2750 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB8259B31CB3613C00DE2750 /* PBXTargetDependency */,
+			);
+			name = VideoLearnDemoTests;
+			productName = VideoLearnDemoTests;
+			productReference = FB8259B11CB3613C00DE2750 /* VideoLearnDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB8259BB1CB3613C00DE2750 /* VideoLearnDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB8259CB1CB3613C00DE2750 /* Build configuration list for PBXNativeTarget "VideoLearnDemoUITests" */;
+			buildPhases = (
+				FB8259B81CB3613C00DE2750 /* Sources */,
+				FB8259B91CB3613C00DE2750 /* Frameworks */,
+				FB8259BA1CB3613C00DE2750 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB8259BE1CB3613C00DE2750 /* PBXTargetDependency */,
+			);
+			name = VideoLearnDemoUITests;
+			productName = VideoLearnDemoUITests;
+			productReference = FB8259BC1CB3613C00DE2750 /* VideoLearnDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB8259901CB3613C00DE2750 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = com.Alice;
+				TargetAttributes = {
+					FB8259971CB3613C00DE2750 = {
+						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 3RLR66R237;
+					};
+					FB8259B01CB3613C00DE2750 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = FB8259971CB3613C00DE2750;
+					};
+					FB8259BB1CB3613C00DE2750 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = FB8259971CB3613C00DE2750;
+					};
+				};
+			};
+			buildConfigurationList = FB8259931CB3613C00DE2750 /* Build configuration list for PBXProject "VideoLearnDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB82598F1CB3613C00DE2750;
+			productRefGroup = FB8259991CB3613C00DE2750 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB8259971CB3613C00DE2750 /* VideoLearnDemo */,
+				FB8259B01CB3613C00DE2750 /* VideoLearnDemoTests */,
+				FB8259BB1CB3613C00DE2750 /* VideoLearnDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB8259961CB3613C00DE2750 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FBE3FE9A1CB4DF110010D83A /* fullscreen-button.png in Resources */,
+				FB8259AB1CB3613C00DE2750 /* LaunchScreen.storyboard in Resources */,
+				FB034AAA1CB513E500CE01A6 /* point.png in Resources */,
+				FBE3FE9E1CB4DF110010D83A /* pause-button.png in Resources */,
+				FBE3FEA21CB4DF110010D83A /* share-button.png in Resources */,
+				FBE3FE9F1CB4DF110010D83A /* pause-button@2x.png in Resources */,
+				FB6C10911CBDF73000D9860A /* Images.xcassets in Resources */,
+				FB8259A81CB3613C00DE2750 /* Assets.xcassets in Resources */,
+				FBE3FEA31CB4DF110010D83A /* share-button@2x.png in Resources */,
+				FBE3FEA01CB4DF110010D83A /* play-button.png in Resources */,
+				FBE3FE9D1CB4DF110010D83A /* minimize-button@2x.png in Resources */,
+				FBE3FE9B1CB4DF110010D83A /* fullscreen-button@2x.png in Resources */,
+				FB8259A61CB3613C00DE2750 /* Main.storyboard in Resources */,
+				FBE3FEA11CB4DF110010D83A /* play-button@2x.png in Resources */,
+				FBE3FE9C1CB4DF110010D83A /* minimize-button.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB8259AF1CB3613C00DE2750 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB8259BA1CB3613C00DE2750 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB8259941CB3613C00DE2750 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB8259A31CB3613C00DE2750 /* ViewController.m in Sources */,
+				FB8259A01CB3613C00DE2750 /* AppDelegate.m in Sources */,
+				FBE3FE8E1CB4A0AA0010D83A /* MovieShowView.m in Sources */,
+				FB82599D1CB3613C00DE2750 /* main.m in Sources */,
+				FB034AAD1CB5194900CE01A6 /* PlayerView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB8259AD1CB3613C00DE2750 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB8259B61CB3613C00DE2750 /* VideoLearnDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB8259B81CB3613C00DE2750 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB8259C11CB3613C00DE2750 /* VideoLearnDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB8259B31CB3613C00DE2750 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB8259971CB3613C00DE2750 /* VideoLearnDemo */;
+			targetProxy = FB8259B21CB3613C00DE2750 /* PBXContainerItemProxy */;
+		};
+		FB8259BE1CB3613C00DE2750 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB8259971CB3613C00DE2750 /* VideoLearnDemo */;
+			targetProxy = FB8259BD1CB3613C00DE2750 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB8259A41CB3613C00DE2750 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB8259A51CB3613C00DE2750 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB8259A91CB3613C00DE2750 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB8259AA1CB3613C00DE2750 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB8259C31CB3613C00DE2750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FB8259C41CB3613C00DE2750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB8259C61CB3613C00DE2750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = VideoLearnDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.customer.VideoLearnDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		FB8259C71CB3613C00DE2750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = VideoLearnDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.customer.VideoLearnDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		FB8259C91CB3613C00DE2750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VideoLearnDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alice.VideoLearnDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoLearnDemo.app/VideoLearnDemo";
+			};
+			name = Debug;
+		};
+		FB8259CA1CB3613C00DE2750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VideoLearnDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alice.VideoLearnDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VideoLearnDemo.app/VideoLearnDemo";
+			};
+			name = Release;
+		};
+		FB8259CC1CB3613C00DE2750 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VideoLearnDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alice.VideoLearnDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VideoLearnDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		FB8259CD1CB3613C00DE2750 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VideoLearnDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.Alice.VideoLearnDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VideoLearnDemo;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB8259931CB3613C00DE2750 /* Build configuration list for PBXProject "VideoLearnDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB8259C31CB3613C00DE2750 /* Debug */,
+				FB8259C41CB3613C00DE2750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB8259C51CB3613C00DE2750 /* Build configuration list for PBXNativeTarget "VideoLearnDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB8259C61CB3613C00DE2750 /* Debug */,
+				FB8259C71CB3613C00DE2750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB8259C81CB3613C00DE2750 /* Build configuration list for PBXNativeTarget "VideoLearnDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB8259C91CB3613C00DE2750 /* Debug */,
+				FB8259CA1CB3613C00DE2750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB8259CB1CB3613C00DE2750 /* Build configuration list for PBXNativeTarget "VideoLearnDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB8259CC1CB3613C00DE2750 /* Debug */,
+				FB8259CD1CB3613C00DE2750 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB8259901CB3613C00DE2750 /* Project object */;
+}
