@@ -28,7 +28,7 @@
     NSLog(@"开始 %@",NSStringFromCGRect (frame));
     // Do any additional setup after loading the view, typically from a nib.
     
-    _showView = [[MovieShowView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 340) andTitle:@"火锅英雄"];
+    _showView = [[MovieShowView alloc]initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 300) andTitle:@"火锅英雄"];
     _showView.backgroundColor = [UIColor blackColor];
     _showView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
     _showView.delegate = self;
@@ -36,7 +36,6 @@
 
     _oriframe = self.view.frame;
     
-
     
 }
 
@@ -52,17 +51,6 @@
             CGRect frame = [UIScreen mainScreen].bounds;
                         
              NSLog(@"aaaaaaaaa %@",NSStringFromCGRect (frame));
-            //方法一
-//             _showView.bounds = CGRectMake(0, 0, frame.size.width, frame.size.height);
-//            CGAffineTransform theTransform = CGAffineTransformMakeTranslation(0,0);
-//            theTransform = CGAffineTransformRotate(theTransform,M_PI_2);
-////            theTransform = CGAffineTransformTranslate(theTransform, frame.size.height*0.436, 0);//6s 163.5f
-////            theTransform = CGAffineTransformTranslate(theTransform, 198.0f, 0);//6sp 198.0f
-//            theTransform = CGAffineTransformTranslate(theTransform, 114.0f, 0);//5c
-////            theTransform = CGAffineTransformTranslate(theTransform, 70.0f, 0);//4s
-//
-//            [_showView setTransform:theTransform];
-//            _showView.center = CGPointMake(frame.size.width/2, frame.size.height/2);
 
             //方法二 优化
            
@@ -127,7 +115,11 @@
     //iPhone上的默认返回值是UIInterfaceOrientationMaskAllButUpsideDown
 }
 
-
+-(void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    
+}
 
 
 

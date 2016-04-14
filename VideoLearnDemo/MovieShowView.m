@@ -26,6 +26,7 @@
 @synthesize player = _player;
 @synthesize playerItem = _playerItem;
 @synthesize playView = _playView;
+@synthesize gestureView = _gestureView;
 
 -(id)initWithFrame:(CGRect)frame andTitle:(NSString *)movieName
 {
@@ -94,14 +95,22 @@
     _playView.player = _player;
     [_playView.player play];
     
+    
     // 添加视频播放结束通知
     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(moviePlayDidEnd:) name:AVPlayerItemDidPlayToEndTimeNotification object:_playerItem];
+    //设备前台后台通知
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(appEnterBackground:) name:@"DidEnterBackground" object:nil];
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(DidBecomeActive:) name:@"DidBecomeActive" object:nil];
     
     //手势控制
+    _gestureView = [[UIView alloc]initWithFrame:CGRectMake(0, HEIGHT, WIDTH, self.bounds.size.height - 2*HEIGHT)];
+    _gestureView.backgroundColor = [UIColor clearColor];
+    [self addSubview:_gestureView];
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
     tap.numberOfTapsRequired = 1;
     tap.numberOfTapsRequired = 1;
-    [self addGestureRecognizer:tap];
+    [_gestureView addGestureRecognizer:tap];
     
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeHandler:)];
     swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
@@ -115,10 +124,10 @@
     UISwipeGestureRecognizer *swipeDown = [[UISwipeGestureRecognizer alloc]initWithTarget:self action:@selector(swipeHandler:)];
     swipeDown.direction = UISwipeGestureRecognizerDirectionDown;
     
-    [self addGestureRecognizer:swipeDown];
-    [self addGestureRecognizer:swipeLeft];
-    [self addGestureRecognizer:swipeRight];
-    [self addGestureRecognizer:swipeUp];
+    [_gestureView addGestureRecognizer:swipeDown];
+    [_gestureView addGestureRecognizer:swipeLeft];
+    [_gestureView addGestureRecognizer:swipeRight];
+    [_gestureView addGestureRecognizer:swipeUp];
     
     self.autoresizesSubviews = YES;
     
@@ -150,11 +159,11 @@
     
     //bottom
     _footPlayBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _footPlayBtn.frame = CGRectMake(10, _bottomView.bounds.size.height/2 -13, 25, 26);
-    [_footPlayBtn setImage:[UIImage imageNamed:@"play-button"] forState:UIControlStateNormal];
+    _footPlayBtn.frame = CGRectMake(10, _bottomView.bounds.size.height/2 -13, 40, 40);
+    [_footPlayBtn setImage:[UIImage imageNamed:@"pause-button"] forState:UIControlStateNormal];
     
     _footScaleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _footScaleBtn.frame = CGRectMake(_bottomView.bounds.size.width-35, _footPlayBtn.frame.origin.y, 25, 26);
+    _footScaleBtn.frame = CGRectMake(_bottomView.bounds.size.width-35, _footPlayBtn.frame.origin.y, 40, 40);
     [_footScaleBtn setImage:[UIImage imageNamed:@"fullscreen-button"] forState:UIControlStateNormal];
     
     
@@ -180,10 +189,10 @@
     
     //button的背景图
     
-    _topBackBtn.imageView.contentMode = UIViewContentModeScaleAspectFill;
-    _topShareBtn.imageView.contentMode = UIViewContentModeScaleAspectFill;
-    _footPlayBtn.imageView.contentMode = UIViewContentModeScaleAspectFill;
-    _footScaleBtn.imageView.contentMode = UIViewContentModeScaleAspectFill;
+    _topBackBtn.imageView.contentMode = UIViewContentModeCenter;
+    _topShareBtn.imageView.contentMode = UIViewContentModeCenter;
+    _footPlayBtn.imageView.contentMode = UIViewContentModeCenter;
+    _footScaleBtn.imageView.contentMode = UIViewContentModeCenter;
     
     [_topBackBtn setTag:Button_topBack];
     [_topShareBtn setTag:Button_topShare];
@@ -243,6 +252,17 @@
     }];
 }
 /**
+ * 对于使用home键的监控
+ */
+- (void)appEnterBackground:(NSNotification *)notification
+{
+    [_playView.player pause];
+}
+- (void)DidBecomeActive:(NSNotification *)notification
+{
+    [_playView.player play];
+}
+/**
  *  时间转换
  */
 - (NSString *)convertTime:(CGFloat)second{
@@ -293,17 +313,28 @@
     _bottomView.frame = CGRectMake(0, _bgView.bounds.size.height-HEIGHT, WIDTH, HEIGHT);
   
     _bottomBGView.frame = CGRectMake(0, 0, WIDTH, HEIGHT);
+    _gestureView.frame = CGRectMake(0, HEIGHT, WIDTH, self.bounds.size.height-HEIGHT*2);
 
     _playView.frame = tempFrame;
     
-     _topBackBtn.frame = CGRectMake(10, _topView.bounds.size.height/2 -10, 25, 26);
-    _topShareBtn.frame = CGRectMake(_topView.bounds.size.width-35, _topBackBtn.frame.origin.y, 25, 26);
-    _topTitleLabel.frame = CGRectMake(40, _topBackBtn.frame.origin.y, _topView.bounds.size.width-80, 26);
-    _footPlayBtn.frame = CGRectMake(10, _bottomView.bounds.size.height/2 -13, 25, 26);
-     _footScaleBtn.frame = CGRectMake(_bottomView.bounds.size.width-35, _footPlayBtn.frame.origin.y, 25, 26);
-    _timeSlider.frame = CGRectMake(40, _bottomView.bounds.size.height/2 -4, _bottomView.bounds.size.width-80, 8);
-    _footShowTimeLabel.frame = CGRectMake(100, _timeSlider.frame.origin.y +11,  _bottomView.bounds.size.width-140, 10);
+     _topBackBtn.frame = CGRectMake(5, _topView.bounds.size.height/2 -20, 40, 40);
+    _topShareBtn.frame = CGRectMake(_topView.bounds.size.width-45, _topBackBtn.frame.origin.y, 40, 40);
+    _topTitleLabel.frame = CGRectMake(50, _topBackBtn.frame.origin.y+6, _topView.bounds.size.width-90, 26);
+    _footPlayBtn.frame = CGRectMake(5, _bottomView.bounds.size.height/2 -20, 40, 40);
+     _footScaleBtn.frame = CGRectMake(_bottomView.bounds.size.width-45, _footPlayBtn.frame.origin.y, 40, 40);
+    _timeSlider.frame = CGRectMake(40, _bottomView.bounds.size.height/2 -4, _bottomView.bounds.size.width-90, 8);
+    _footShowTimeLabel.frame = CGRectMake(100, _timeSlider.frame.origin.y +11,  _bottomView.bounds.size.width-150, 10);
     
+    //竖屏没有展示topView
+    if (_isFullScreen) {
+        _topView.hidden = NO;
+
+    }
+    else
+    {
+        _topView.hidden = YES;
+
+    }
     
 }
 #pragma mark === 页面上按钮事件处理
@@ -315,7 +346,6 @@
         case Button_topBack:
         {
             NSLog(@"Button_topBack  返回按钮");
-//            [_playView.player pause];
             
             if (_isFullScreen) {
                 if (self.delegate) {
@@ -339,7 +369,6 @@
                 [_playView.player pause];
                 
                 _isPlay = NO;
-                
             }
             
         }
@@ -357,10 +386,7 @@
             break;
         case Button_footScale:
         {
-//            NSLog(@"Button_footScale  缩放按钮");
-            
-            
-                        if (_isFullScreen) {
+            if (_isFullScreen) {
                 
                 if (self.delegate) {
                     [self.delegate clickBtnFullScreen:NO];
@@ -378,13 +404,13 @@
                     [self.delegate clickBtnFullScreen:YES];
                 }
                 [_footScaleBtn setImage:[UIImage imageNamed:@"minimize-button"] forState:UIControlStateNormal];
-
+                
                 CGRect frame = self.frame;
                 frame.size.height = [UIScreen mainScreen].bounds.size.width;
                 frame.size.width = [UIScreen mainScreen].bounds.size.height;
                 self.frame = frame;
                 [self layoutSubviews];
-               
+                
             }
             _isFullScreen = !_isFullScreen;
             
@@ -408,8 +434,11 @@
     CGFloat nowSecond = slide.value;
     CMTime curTime = _playerItem.duration;
     curTime.value = nowSecond * _playerItem.duration.value;
-    [_player seekToTime:curTime];
-    [_playView.player play];
+    
+     __weak typeof(self) weakSelf = self;
+    [self.playView.player seekToTime:curTime completionHandler:^(BOOL finished) {
+        [weakSelf.playView.player play];
+    }];
     
 }
 -(void)sliderDragUp:(id)sender
@@ -421,12 +450,12 @@
 {
     if (_isPlay) {
         [_playView.player pause];
-        [_footPlayBtn setImage:[UIImage imageNamed:@"pause-button"] forState:UIControlStateNormal];
+        [_footPlayBtn setImage:[UIImage imageNamed:@"play-button"] forState:UIControlStateNormal];
     }
     else
     {
         [_playView.player play];
-        [_footPlayBtn setImage:[UIImage imageNamed:@"play-button"] forState:UIControlStateNormal];
+        [_footPlayBtn setImage:[UIImage imageNamed:@"pause-button"] forState:UIControlStateNormal];
     }
     _isPlay = !_isPlay;
 }
@@ -490,7 +519,7 @@
         [_playView.player play];
         return;
     }
-    //音量控制 不建议这样写
+    //音量控制 不建议这样写 设备系统的声音大小就决定了这样调节声音大小的范围
     if (gesture.direction == UISwipeGestureRecognizerDirectionUp) {
         NSLog(@"up");
         CGFloat volume = _playView.player.volume;
@@ -499,8 +528,8 @@
         }
         else
             volume = 1.0;
-       
         _playView.player.volume = volume;
+
         return;
     }
     if (gesture.direction == UISwipeGestureRecognizerDirectionDown) {
@@ -511,14 +540,12 @@
         }
         else
             volume = 0.0;
-        
         _playView.player.volume = volume;
         
         return;
     }
-    
-    
 }
+
 /**
  *  控制页面的动画
  */
@@ -534,6 +561,9 @@
     [view.layer addAnimation:animation forKey:@"position"];
 }
 
-
+-(void)dealloc
+{
+    [[NSNotificationCenter defaultCenter]removeObserver:self];
+}
 
 @end

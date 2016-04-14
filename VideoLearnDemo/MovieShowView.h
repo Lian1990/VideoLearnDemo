@@ -43,6 +43,7 @@ typedef enum {
 @property (strong,nonatomic) UIView *bottomView;
 @property (strong,nonatomic) UIView *topBGView;
 @property (strong,nonatomic) UIView *bottomBGView;
+@property (strong,nonatomic) UIView *gestureView;//避免手势和button事件冲突
 
 
 @property (strong,nonatomic) UIButton *topBackBtn;
