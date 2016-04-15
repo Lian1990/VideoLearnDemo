@@ -19,7 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor redColor];
+    self.view.backgroundColor = [UIColor whiteColor];
     self.view.autoresizesSubviews = YES;
     self.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
     
@@ -81,6 +81,14 @@
             [_showView layoutIfNeeded];
         }];
     }
+}
+-(void)clickBtnShare
+{
+    NSLog(@"share-delegate");
+}
+-(void)clickBtnBack
+{
+    NSLog(@"back-delegate");
 }
 
 //导航条的动画

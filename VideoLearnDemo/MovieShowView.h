@@ -17,6 +17,8 @@
 @optional
 
 -(void)clickBtnFullScreen:(BOOL)isFull;
+-(void)clickBtnShare;
+-(void)clickBtnBack;
 
 @end
 

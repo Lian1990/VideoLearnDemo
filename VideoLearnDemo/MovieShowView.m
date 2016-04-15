@@ -326,15 +326,15 @@
     _footShowTimeLabel.frame = CGRectMake(100, _timeSlider.frame.origin.y +11,  _bottomView.bounds.size.width-150, 10);
     
     //竖屏没有展示topView
-    if (_isFullScreen) {
-        _topView.hidden = NO;
-
-    }
-    else
-    {
-        _topView.hidden = YES;
-
-    }
+//    if (_isFullScreen) {
+//        _topView.hidden = NO;
+//
+//    }
+//    else
+//    {
+//        _topView.hidden = YES;
+//
+//    }
     
 }
 #pragma mark === 页面上按钮事件处理
@@ -369,6 +369,10 @@
                 [_playView.player pause];
                 
                 _isPlay = NO;
+                
+                if (self.delegate) {
+                    [self.delegate clickBtnBack];
+                }
             }
             
         }
@@ -376,6 +380,9 @@
         case Button_topShare:
         {
             NSLog(@"Button_topShare  分享按钮");
+            if (self.delegate) {
+                [self.delegate clickBtnShare];
+            }
         }
             break;
         case Button_footPlay:
@@ -520,18 +527,18 @@
         return;
     }
     //音量控制 不建议这样写 设备系统的声音大小就决定了这样调节声音大小的范围
-    if (gesture.direction == UISwipeGestureRecognizerDirectionUp) {
-        NSLog(@"up");
-        CGFloat volume = _playView.player.volume;
-        if (volume <= 0.9) {
-             volume += 0.1;
-        }
-        else
-            volume = 1.0;
-        _playView.player.volume = volume;
-
-        return;
-    }
+//    if (gesture.direction == UISwipeGestureRecognizerDirectionUp) {
+//        NSLog(@"up");
+//        CGFloat volume = _playView.player.volume;
+//        if (volume <= 0.9) {
+//             volume += 0.1;
+//        }
+//        else
+//            volume = 1.0;
+//        _playView.player.volume = volume;
+//
+//        return;
+//    }
     if (gesture.direction == UISwipeGestureRecognizerDirectionDown) {
         NSLog(@"down");
         CGFloat volume = _playView.player.volume;
